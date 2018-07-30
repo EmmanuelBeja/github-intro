@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A step by step introduction to github.">
+    <meta name ="keywords" content="Github, Collaboration, Getting started with github, pushing in github">
+    <title>Github Cheat Sheet.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="terminal.css">
+  </head>
+  <body>
+    <div class="container">
+     <div class="row">
+       <div class="col-md-8 offset-md-2" style="margin-top:30px;">
+
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <h1>Github: Getting started.</h1>
+             <hr>
+             <h2>Prerequisites</h2>
+             <ul>
+               <li>Internet.</li>
+               <li>A github Account.</li>
+               <li>For windows;gitbash. Download gitbash <a href="https://git-scm.com/download/win" target="_blank">here</a></li>
+             </ul>
+             <br>
+             <h2>Creating A Repository</h2>
+             <ul>
+               <li>Create repository in your github Account and call it the name of the project.</li>
+               <li>Add description of project.(optional)</li>
+               <li>Check public(For public repository. Private is paid for.)</li>
+               <li>Initialize with a readme.(Optional)</li>
+               <li>Add .gitignore file (optional)</li>
+               <li>Add license(commonly used license for open source projects is MIT. This is also optional)</li>
+               <li>Copy link of the project. It could be in either of the two options bellow.</li>
+             </ul>
+             <img src="clone1.png" alt="" class="img img-responsive img-thumbnail"/>
+              <h3 style="text-align:center;">OR</h3>
+             <img src="clone2.png" alt="" class="img img-responsive img-thumbnail" style="margin:0 auto;display:block;"/>
+             <br>
+             <i>Cowabunga! You have your first github repository. Simple right? So now we need to put stuff in it.</i><br>
+             <br>
+             <h2>Pushing to Github</h2>
+            <h3>Method 1</h3>
+            On your computer open the terminal for linux users. For window users, open gitbash comandline tool.<br>
+            Ensure it is in the place you want to work your project on. Eg. Desktop<br>
+            now key in the following commands:<br>
+
+            <div class="terminal_window" style="height:100px;">
+              <header>
+                <div class="red_btn button"></div>
+                <div class="green_btn button"></div>
+                <div class="yellow_btn button"></div>
+              </header>
+              <div class="terminal_window">
+                <div id="typed-strings" class="terminal_text">
+                  <p>
+                      <span style="padding-right:10px;">$ git clone clonelinkfromgithub</span>
+                  </p>
+                </div>
+                <span id="typed"></span>
+              </div>
+            </div>
+            <br>
+            <p>
+            This will download the repository you created on github.<br>
+            Now get into the downloaded project folder.I will do it as bellow<br>
+            </p>
+            <div class="terminal_window" style="height:100px;">
+              <header>
+                <div class="red_btn button"></div>
+                <div class="green_btn button"></div>
+                <div class="yellow_btn button"></div>
+              </header>
+              <div class="terminal_window">
+                <div id="typed-strings" class="terminal_text">
+                  <p>
+                      <span style="padding-right:10px;">$ cd nameofproject</span>
+                  </p>
+                </div>
+                <span id="typed"></span>
+              </div>
+            </div>
+            <br>
+            <p>
+            Copy files you want to upload in the folder you have cloned.
+            Ensuring your terminal/gitbash console is in the cloned project folder follow the steps bellow.
+            You will do this for each and every file. One at a time.
+            Given an example; having files index.py and login.py, we will start with either of the files and follow the procedure bellow. When done, we will redo the same procces with the second remaining file.
+            This is something we will do for each file again and again untill we have no more remaining.
+            </p>
+            <div class="terminal_window" style="height:150px;">
+              <header>
+                <div class="red_btn button"></div>
+                <div class="green_btn button"></div>
+                <div class="yellow_btn button"></div>
+              </header>
+              <div class="terminal_window">
+                <div id="typed-strings" class="terminal_text">
+                  <p>
+                      <span style="padding-right:10px;">$ git add index.py</span><br>
+                      <span style="">$ git commit -m "describe what you did"</span><br>
+                      <span style="">$ git push -u origin master</span>
+                  </p>
+                </div>
+                <span id="typed"></span>
+              </div>
+            </div>
+            <br>
+            <p>
+            <i class="text-muted">Wait...What just happened?</i><br>
+            <code>git add index.py</code><br>
+            Adds the modified and new (untracked) file in the current directory to the staging area (a.k.a. the index), thus preparing it to be included in the next git commit.<br>
+            <code>git commit -m "describe what you did"</code><br>
+            Record changes to the repository. Note: never let the mssg have a ' in between<br>
+            <code>git push -u origin master</code><br>
+            Push changes from the local master branch to the remote master branch. This might prompt you for you your github user name and password depending on configuration of github on your machine.<br>
+            Use "git status" incase you are lost and need hints from github<br>
+            </p>
+           </div>
+         </div>
+     </div>
+
+     </div>
+    </div>
+
+    <footer style="background-color:teal;">
+      <span style="text-align:center;display: block;margin: 30px;">
+        Made with <i class="fa fa-heart" style="color:red;"></i> by Emmanuel Beja.
+      </span>
+
+    </footer>
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js"></script>
+    <script src="terminal.js" charset="utf-8"></script>
+  </body>
+</html>
