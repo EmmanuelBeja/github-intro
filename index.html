@@ -12,9 +12,9 @@
   <body>
     <div class="container">
      <div class="row">
-       <div class="col-md-8 offset-md-2" style="margin-top:30px;">
+       <div class="col-md-8 offset-md-2">
 
-         <div class="panel panel-default">
+         <div class="panel panel-default" style="margin:40px 0px;">
            <div class="panel-body">
              <h1>Github: Getting started.</h1>
              <hr>
@@ -33,16 +33,19 @@
                <li>Initialize with a readme.(Optional) To learn more about styling your readme <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">click here</a> </li>
                <li>Add .gitignore file (optional)</li>
                <li>Add license(commonly used license for open source projects is MIT. This is also optional)</li>
-               <li>Copy link of the project. It could be in either of the two options bellow.</li>
              </ul>
-             <img src="clone1.png" alt="" class="img img-responsive img-thumbnail"/>
-              <h3 style="text-align:center;">OR</h3>
-             <img src="clone2.png" alt="" class="img img-responsive img-thumbnail" style="margin:0 auto;display:block;"/>
-             <br>
              <i>Cowabunga! You have your first github repository. Simple right? So now we need to put stuff in it.</i><br>
              <br>
-             <h2>Pushing to Github</h2>
-            <h3>Method 1</h3>
+
+             <hr>
+
+            <h2>Pushing to Github</h2>
+            <h4>Method 1</h4>
+             Copy link of the project. It could be in either of the two options bellow.
+            <img src="clone1.png" alt="" class="img img-responsive img-thumbnail"/>
+             <h3 style="text-align:center;">OR</h3>
+            <img src="clone2.png" alt="" class="img img-responsive img-thumbnail" style="margin:0 auto;display:block;"/>
+            <br>
             On your computer open the terminal for linux users. For window users, open gitbash comandline tool.<br>
             Ensure it is in the place you want to work your project on. Eg. Desktop<br>
             now key in the following commands:<br>
@@ -64,30 +67,10 @@
             </div>
             <br>
             <p>
-            This will download the repository you created on github.<br>
-            Now get into the downloaded project folder.I will do it as bellow<br>
-            </p>
-            <div class="terminal_window" style="height:100px;">
-              <header>
-                <div class="red_btn button"></div>
-                <div class="green_btn button"></div>
-                <div class="yellow_btn button"></div>
-              </header>
-              <div class="terminal_window">
-                <div id="typed-strings" class="terminal_text">
-                  <p>
-                      <span style="padding-right:10px;">$ cd nameofproject</span>
-                  </p>
-                </div>
-                <span id="typed"></span>
-              </div>
-            </div>
-            <br>
-            <p>
+            This will download the repository you created on github into your local machine.
             Copy files you want to upload in the folder you have cloned.
             Ensuring your terminal/gitbash console is in the cloned project folder follow the steps bellow.
             You will do this for each and every file. One at a time.
-            Given an example; having files index.py and login.py, we will start with either of the files and follow the procedure bellow. When done, we will redo the same procces with the second remaining file.
             This is something we will do for each file again and again untill we have no more remaining.
             </p>
             <div class="terminal_window" style="height:150px;">
@@ -99,7 +82,7 @@
               <div class="terminal_window">
                 <div id="typed-strings" class="terminal_text">
                   <p>
-                      <span style="padding-right:10px;">$ git add index.py</span><br>
+                      <span style="padding-right:10px;">$ git add fileyouwantpushed</span><br>
                       <span style="">$ git commit -m "describe what you did"</span><br>
                       <span style="">$ git push -u origin master</span>
                   </p>
@@ -118,12 +101,112 @@
             Push changes from the local master branch to the remote master branch. This might prompt you for you your github user name and password depending on configuration of github on your machine.<br>
             Use "git status" incase you are lost and need hints from github<br>
             </p>
+
+            <hr>
+
+            <h4>Method 2</h4>
+            <p>
+              In you project(which is in your local machine), open terminal in the folder(for linux users) or gitbash(for windows users).
+            </p>
+            <div class="terminal_window" style="height:150px;">
+              <header>
+                <div class="red_btn button"></div>
+                <div class="green_btn button"></div>
+                <div class="yellow_btn button"></div>
+              </header>
+              <div class="terminal_window">
+                <div id="typed-strings" class="terminal_text">
+                  <p>
+                      <span style="padding-right:10px;">$ git init</span><br>
+                      <span style="">$ git add fileyouwantpushed</span><br>
+                      <span style="">$ git commit -m 'message about the changes'</span><br>
+                      <span>$ git remote add origin clonelinkfromgithub</span><br>
+                      <span style="">$ git push -u origin master</span>
+                  </p>
+                </div>
+                <span id="typed"></span>
+              </div>
+            </div>
+            <code>git init</code><br>
+            <p>
+            This command creates an empty Git repository - basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files. An initial HEAD file that references the HEAD of the master branch is also created.
+            <p>
+
+           <hr>
+
+           <h2>Creating A New branch</h2>
+           <p>
+           In the local project that has been interacting with a respective github repo, open your terminal.
+           </p>
+           <div class="terminal_window" style="height:100px;">
+             <header>
+               <div class="red_btn button"></div>
+               <div class="green_btn button"></div>
+               <div class="yellow_btn button"></div>
+             </header>
+             <div class="terminal_window">
+               <div id="typed-strings" class="terminal_text">
+                 <p>
+                     <span style="padding-right:10px;">$ git checkout -b newbranchname</span><br>
+                 </p>
+               </div>
+               <span id="typed"></span>
+             </div>
+           </div>
+          <p>
+           And you have a new branch in your local machine. So now you need to add content in it then push it to your github to update the repository.
+           After adding content, do as bellow.
+           </p>
+           <div class="terminal_window" style="height:150px;">
+             <header>
+               <div class="red_btn button"></div>
+               <div class="green_btn button"></div>
+               <div class="yellow_btn button"></div>
+             </header>
+             <div class="terminal_window">
+               <div id="typed-strings" class="terminal_text">
+                 <p>
+                     <span style="padding-right:10px;">$ git add fileyouwantpushed</span><br>
+                     <span style="">$ git commit -m "describe what you did"</span><br>
+                     <span style="">$ git push -u origin master</span>
+                 </p>
+               </div>
+               <span id="typed"></span>
+             </div>
+           </div>
+           <p>
+             When pushing to github, always ensure you are in the right branch. You can know the branch you are in by typing: <code> git branch</code><br>
+             Delete a branch on your local filesystem : <code>git branch -d branchname</code>
+           </p>
+
+           <h1>Fetch</h1>
+           <p>
+             <code>git fetch</code><br>
+             Only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files.
+             Fetch is great for getting a fresh view on all the things that happened in a remote repository.
+             Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything.
+             This means you can never fetch often enough.
+           </p>
+
+           <h1>Pull</h1>
+           <p>
+             <code>git pull</code><br>
+             Updates your current HEAD branch with the latest changes from the remote server.
+             This means that pull not only downloads new data; it also directly integrates it into your current working copy files.<br>
+             This has a couple of consequences:
+             <ul>
+               <li>Since "git pull" tries to merge remote changes with your local ones, a so-called "merge conflict" can occur. Check out our in-depth tutorial on <a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/merge-conflicts">How to deal with merge conflicts</a> for more information.</li>
+               <li>Like for many other actions, it's highly recommended to start a "git pull" only with a clean working copy. This means that you should not have any uncommitted local changes before you pull. Use <a href="https://www.git-tower.com/learn/git/ebook/en/command-line/branching-merging/stashing">Git's Stash feature</a> to save your local changes temporarily.</li>
+             </ul>
+           </p>
+
            </div>
          </div>
      </div>
 
      </div>
     </div>
+
 
     <footer style="background-color:#0d1f2d;color:white;">
       <span style="text-align:center;display: block;padding: 30px;">
@@ -138,5 +221,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js"></script>
     <script src="terminal.js" charset="utf-8"></script>
+
   </body>
 </html>
